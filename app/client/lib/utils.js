@@ -1,4 +1,4 @@
-function haverDistance(p1,p2){
+haverDistance = (function(p1,p2){
     var R = 41807040;
     var dLat = (Math.PI/180.0)*((p2.lat-p1.lat));
     var dLon = (Math.PI/180.0)*((p2.lng-p1.lng));
@@ -8,7 +8,8 @@ function haverDistance(p1,p2){
     var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
     var d = R * c;
     return d;
-}
-function roundTo(num) {    
+});
+
+function roundTo(num) {
     return +(Math.round(num + "e+8")  + "e-8");
 }
